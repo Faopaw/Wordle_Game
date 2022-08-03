@@ -14,6 +14,12 @@ const WORDLE_DICTIONARY = [
   "IMAGE",
 ];
 
+// Add event listener to form sumbit button and get the userinput and save it to the variable userGuess.
+document.getElementById("word").innerHTML;
+
+
+
+
 // a function to prompt the user to guess the word.
 
 function getWord () {
@@ -28,10 +34,13 @@ function selectWord () {
     const word = WORDLE_DICTIONARY[num];
     return word;
 }
+
+
 // Main function to run the game;
 function runGame () {
+    let userGuess = (document.getElementById("inputbox").value).toUpperCase();
     let word = selectWord();
-    let userGuess = (prompt("Enter your guess in the input box. (5 Letter word, no spaces please.)")).toUpperCase();
+    // let userGuess = (prompt("Enter your guess in the input box. (5 Letter word, no spaces please.)")).toUpperCase();
     while (!(userGuess === word)) {
         userGuess = getWord();
         if (userGuess === word) {
@@ -44,3 +53,6 @@ function runGame () {
 
 
 runGame();
+
+
+
