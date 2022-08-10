@@ -48,12 +48,13 @@ function runGame() {
   if (!(userGuess === word)) {
     hintCount + 1;
     alert("Please try again!");
-    if (hintCount % 5 === 0) {
+    if (hintCount % 5 == 0) {
       // A hint is given every 5 attempts
       hintGiver(word);
     }
   }
   if (userGuess === word) {
     alert("Correct! You have got the right answer!");
+    // Once user guesses the word
   }
 }
